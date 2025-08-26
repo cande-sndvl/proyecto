@@ -1,0 +1,428 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@500&display=swap');
+
+/*RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Hace que padding y border no aumenten el ancho total */
+}
+
+/*ESTILOS GENERALES*/
+body {
+  background-color: #f9f9f9!important;
+  color: #4A2E2A!important; 
+  font-family: "Intel One Mono", monospace; 
+  font-weight: 500;
+  font-style: normal;
+  font-optical-sizing: auto;
+  line-height: 1.6;
+}
+
+/* Títulos generales */
+h1 {
+  font-family: "Libre Baskerville", serif; 
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #4A2E2A;
+}
+
+/* Links generales */
+a {
+  text-decoration: none; /* Sin subrayado */
+  color: #4A2E2A; 
+  transition: color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+a:hover,
+a:focus {
+  color: #7d7b7a; /*más claro en hover/focus*/
+  outline: none;
+}
+
+/*NAVBAR*/
+.mi-navbar {
+  background-color: #e2dede!important;
+  padding: 20px 0;
+}
+
+/* Afecta ul con clase navbar-nav dentro de mi-navbar */
+.mi-navbar .navbar-nav {
+  list-style: none;
+  display: flex; /* menú horizontal */
+  justify-content: center !important;
+  gap: 100px;
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.5rem;
+}
+
+/* Afecta links con clase nav-link dentro de mi-navbar */
+.mi-navbar .nav-link {
+  color: #4A2E2A !important;
+  font-family: "Libre Baskerville", serif; 
+  font-size: 2.5rem;
+}
+
+/*FOOTER */
+footer {
+  background-color: #f9f9f9; 
+  padding: 20px 0;
+  font-family: "Libre Baskerville", serif;
+  color: #4A2E2A;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;   /* Espacio entre ítems */
+  font-size: 2rem;
+}
+
+footer ul li a {
+  display: inline-block;
+  background-color: #bcb9b9;
+  color: #4A2E2A;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+footer ul li a:hover,
+footer ul li a:focus {
+  background-color: #6a6969; /* Color hover más oscuro */
+  color: #fff;
+  outline: none;
+}
+
+/* Texto final en footer */
+.footer p {
+  font-size: 2.5rem;
+  margin: 20px auto 0;
+}
+
+/*INICIO*/
+.inicio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.inicio .texto {
+  text-align: center;
+}
+
+.inicio h1 {
+  font-size: 4rem;
+  padding: 10px;
+  margin-bottom: 60px;
+  color: #4A2E2A;
+}
+
+.inicio p {
+  font-size: 4rem;
+  margin: 10px 0 50px;
+  color: #4A2E2A;
+}
+
+.explora-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 3rem;
+  border-radius: 10px;
+  color: #4A2E2A;
+  background-color: #e2dede;
+  font-family: "Libre Baskerville", serif;
+  transition: background-color 0.3s ease;
+}
+
+.explora-btn:hover,
+.explora-btn:focus {
+  background-color: #bcb9b9;
+  outline: none;
+}
+
+/* SOBRE MI */
+.sobre-mi section{
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px; /* Limita ancho para mejor lectura */
+  padding: 0 15px;
+}
+
+.sobre-mi h1 {
+  margin-bottom: 50px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sobre-mi p {
+  font-size: 1.5rem;
+   line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Intel One Mono", monospace;
+}
+
+
+
+/* Grid fotos sobre mi  */
+.fotos{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.fotos img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.fotos img:hover,
+.fotos  img:focus {
+  transform: scale(1.03);
+  outline: none;
+}
+
+
+/* MI VISIÓN */
+.mivision section {
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px; /* Limita ancho para mejor lectura */
+  padding: 0 15px;
+}
+
+.mivision h1 {
+  margin-bottom: 50px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+
+.mivision p {
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Intel One Mono", monospace;
+}
+
+/* Grid fotos mi visión */
+.fotos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.fotos-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.fotos-grid img:hover,
+.fotos-grid img:focus {
+  transform: scale(1.03);
+  outline: none;
+}
+
+/*MI CAMINO */
+.micamino section {
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 15px;
+}
+
+.micamino h1 {
+  margin-bottom: 50px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+
+.micamino p {
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Intel One Mono", monospace;
+ font-size: 1.5rem;
+text-align: center;
+
+}
+
+
+/* CONTACTOS */
+.contactos section {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 0 15px;
+}
+
+.contactos h1 {
+  margin-top: 200px;
+  margin-bottom: 50px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+
+.contactos p {
+  font-size: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Intel One Mono", monospace;
+}
+
+/*MEDIA QUERY  */
+@media (max-width: 768px) {
+  /* NAVBAR: menú vertical y tamaño más chico */
+  .mi-navbar ul {
+    flex-direction: column; /* Cambia menú a columna en móvil */
+    gap: 1rem;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  /* FOOTER */
+  footer ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  footer ul li a {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  /* INICIO:*/
+  .inicio h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .explora-btn {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
+
+  /* SOBRE MI */
+  .sobre-mi {
+    grid-template-columns: 1fr; 
+    padding: 20px;
+  }
+
+  .sobre-mi .texto {
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .sobre-mi h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding: 8px;
+  }
+
+  .sobre-mi p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+
+  .fotos {
+   grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 10px;
+    padding: 15px;
+  }
+  .fotos img {
+    height: auto; /* Ajusta altura automáticamente */
+  }
+
+  /* MI VISIÓN */
+  .fotos-grid {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .fotos-grid img {
+    height: auto; /* Ajusta altura automáticamente */
+  }
+
+  .mivision h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .mivision p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* MI CAMINO */
+  .micamino h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .micamino p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  /* CONTACTOS*/
+  .contactos h1 {
+    
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .contactos p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+
+
+
+
