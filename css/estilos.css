@@ -1,3 +1,12 @@
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +14,8 @@
 }
 
 body {
-  background-color: #f9f9f9 !important;
-  color: #4A2E2A !important;
+  background-color: #e4e2dd;
+  color: #686666 !important;
   font-family: "Intel One Mono", monospace;
   font-weight: 500;
   line-height: 1.6;
@@ -16,9 +25,10 @@ h1 {
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #4A2E2A;
+  color: #686666;
+  text-shadow: 2px 2px 5px rgb(47, 47, 47);
   -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -35,7 +45,7 @@ h1 {
 }
 @keyframes tracking-in-expand {
   0% {
-    letter-spacing: -0.5em;
+    letter-spacing: -0.2em;
     opacity: 0;
   }
   40% {
@@ -47,16 +57,16 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: #4A2E2A;
+  color: #686666;
   transition: color 0.3s ease;
 }
 a:hover, a:focus {
-  color: #7d7b7a;
+  color: #bb27e8;
   outline: none;
 }
 
 .mi-navbar {
-  background-color: #e2dede !important;
+  background-color: transparent !important;
   padding: 20px 0;
 }
 .mi-navbar .navbar-nav {
@@ -64,26 +74,27 @@ a:hover, a:focus {
   display: flex;
   justify-content: center !important;
   gap: 80px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgb(128, 128, 128);
   font-family: "Libre Baskerville", serif;
   font-size: 2rem;
 }
 .mi-navbar .navbar-nav .nav-link {
-  color: #4A2E2A !important;
+  color: #686666 !important;
   font-family: "Libre Baskerville", serif;
   font-size: 2rem;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 .mi-navbar .navbar-nav .nav-link:hover, .mi-navbar .navbar-nav .nav-link:focus {
-  color: #7d7b7a;
+  color: #bb27e8;
   outline: none;
 }
 
 footer {
-  background-color: #f9f9f9;
   padding: 20px 0;
   font-family: "Libre Baskerville", serif;
-  color: #4A2E2A;
+  color: #686666;
   text-align: center;
 }
 footer ul {
@@ -97,8 +108,8 @@ footer ul {
 }
 footer ul li a {
   display: inline-block;
-  background-color: #bcb9b9;
-  color: #4A2E2A;
+  background-color: #ffffff;
+  color: #686666;
   padding: 20px;
   border-radius: 20px;
   font-family: "Libre Baskerville", serif;
@@ -111,10 +122,12 @@ footer ul li a:hover, footer ul li a:focus {
   outline: none;
 }
 footer ul li a:hover, footer ul li a:focus {
-  background-color: #6a6969;
+  background-color: #676363;
   color: #fff;
+  box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 footer p {
+  font-weight: 700;
   font-size: 2.5rem;
   margin: 20px auto 0;
 }
@@ -126,13 +139,15 @@ footer p {
   padding: 0 15px;
 }
 .section-base h1, .contactos h1, .micamino h1, .mivision h1, .sobre-mi h1, .inicio h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   margin-bottom: 50px;
 }
 .section-base p, .contactos p, .micamino p, .mivision p, .sobre-mi p, .inicio p {
   font-size: 2rem;
   line-height: 1.6;
   margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgb(197, 197, 197);
 }
 
 .inicio {
@@ -147,8 +162,8 @@ footer p {
   padding: 10px 20px;
   font-size: 3rem;
   border-radius: 10px;
-  background-color: #e2dede;
-  color: #4A2E2A;
+  background-color: #ffffff;
+  color: #686666;
   font-family: "Libre Baskerville", serif;
   transition: transform 0.3s ease;
 }
@@ -169,7 +184,7 @@ footer p {
   height: 350px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgb(4, 3, 3);
   transition: transform 0.3s ease;
 }
 .sobre-mi .fotos img:hover, .sobre-mi .fotos img:focus {
@@ -190,7 +205,7 @@ footer p {
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
   transition: transform 0.3s ease;
 }
 .mivision .fotos-grid img:hover, .mivision .fotos-grid img:focus {

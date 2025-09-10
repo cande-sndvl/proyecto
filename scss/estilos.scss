@@ -1,22 +1,35 @@
 // ===================== VARIABLES =====================
-$color-principal: #4A2E2A;
-$color-secundario: #f9f9f9;
-$color-hover: #7d7b7a;
-$color-footer-bg: #f9f9f9;
-$color-footer-btn-bg: #bcb9b9;
-$color-footer-btn-hover: #6a6969;
+$color-principal:#686666;
+$color-secundario: #e4e2dd;
+$color-hover: #bb27e8;
+$color-footer-btn-bg:#ffffff;
+$color-footer-btn-hover: #676363;
 
 $font-titulo: 'Libre Baskerville', serif;
 $font-cuerpo: 'Intel One Mono', monospace;
 
 $transicion: 0.3s ease;
 
+// Fondo de partículas
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;   // queda detrás de todo el contenido
+}
+
+
+
+
+
 // ===================== MIXINS =====================
 @mixin transicion($prop) {
   transition: $prop $transicion;
 }
 
-// Hover transform con escala opcional
+// Hover transform con escala
 @mixin hover-focus-transform($scale: 1.05) {
   &:hover,
   &:focus {
@@ -26,7 +39,7 @@ $transicion: 0.3s ease;
   transition: transform $transicion;
 }
 
-// Hover con animación de escala, escala opcional
+// Hover con animación de escala
 @mixin hover-scale-animation($scale: 1.05) {
   &:hover,
   &:focus {
@@ -46,7 +59,7 @@ $transicion: 0.3s ease;
 
 // ===================== ESTILOS GENERALES =====================
 body {
-  background-color: $color-secundario !important;
+  background-color: $color-secundario;
   color: $color-principal !important;
   font-family: $font-cuerpo;
   font-weight: 500;
@@ -59,9 +72,12 @@ h1 {
   text-transform: uppercase;
   color: $color-principal;
 
+    // Sombra 
+  text-shadow: 2px 2px 5px rgb(47, 47, 47);
+
   // Animación tracking-in-expand en todos los h1
   -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-          animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+          animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -71,7 +87,7 @@ h1 {
 }
 
 @keyframes tracking-in-expand {
-  0% { letter-spacing: -0.5em; opacity: 0; }
+  0% { letter-spacing: -0.2em; opacity: 0; }
   40% { opacity: 0.6; }
   100% { opacity: 1; }
 }
@@ -90,7 +106,7 @@ a {
 
 // ===================== NAVBAR UNIFORME =====================
 .mi-navbar {
-  background-color: #e2dede !important;
+  background-color:transparent !important;
   padding: 20px 0;
 
   .navbar-nav {
@@ -98,6 +114,9 @@ a {
     display: flex;
     justify-content: center !important;
     gap: 80px;
+     font-weight: 700;
+       text-shadow: 2px 2px 5px rgb(128, 128, 128);
+
     font-family: $font-titulo;
     font-size: 2rem;
 
@@ -119,11 +138,11 @@ a {
 
 // ===================== FOOTER =====================
 footer {
-  background-color: $color-footer-bg;
   padding: 20px 0;
   font-family: $font-titulo;
   color: $color-principal;
   text-align: center;
+  
 
   ul {
     list-style: none;
@@ -142,19 +161,21 @@ footer {
       border-radius: 20px;
       font-family: $font-titulo;
       font-size: 2rem;
-      @include hover-scale-animation(1.1); // ahora funciona
+      @include hover-scale-animation(1.1); // 
 
       &:hover,
       &:focus {
         background-color: $color-footer-btn-hover;
         color: #fff;
+        box-shadow: 0 0 15px rgb(0, 0, 0);
       }
     }
   }
 
-  p {
+  p { font-weight: 700;
     font-size: 2.5rem;
     margin: 20px auto 0;
+    
   }
 }
 
@@ -166,7 +187,7 @@ footer {
   padding: 0 15px;
 
   h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 50px;
   }
 
@@ -174,6 +195,8 @@ footer {
     font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 30px;
+    font-weight: 700;
+      text-shadow: 2px 2px 5px rgb(197, 197, 197);
   }
 }
 
@@ -186,12 +209,13 @@ footer {
   justify-content: center;
   align-items: center;
 
+  
   .explora-btn {
     display: inline-block;
     padding: 10px 20px;
     font-size: 3rem;
     border-radius: 10px;
-    background-color: #e2dede;
+    background-color: #ffffff;
     color: $color-principal;
     font-family: $font-titulo;
     @include hover-scale-animation; // escala por defecto 1.05
@@ -213,7 +237,7 @@ footer {
       height: 350px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgb(4, 3, 3);
       @include hover-scale-animation; // escala por defecto 1.05
     }
   }
@@ -235,8 +259,8 @@ footer {
       height: 250px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      @include hover-scale-animation; // escala por defecto 1.05
+      box-shadow: 0 4px 8px rgb(0, 0, 0);
+      @include hover-scale-animation; // 
     }
   }
 }
@@ -251,7 +275,7 @@ footer {
   @extend .section-base;
 
   footer ul li a {
-    @include hover-scale-animation(1.1); // ahora funciona perfectamente
+    @include hover-scale-animation(1.1); //
   }
 }
 
@@ -302,3 +326,5 @@ footer {
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
+
+
