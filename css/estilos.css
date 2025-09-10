@@ -225,17 +225,27 @@ footer p {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 3rem !important;
     margin-bottom: 20px;
   }
   p {
-    font-size: 1rem;
-    padding: 0 10px;
+    font-size: 1.2rem !important;
+    line-height: 1.4;
+    padding: 0 15px;
   }
   .explora-btn,
   footer ul li a {
-    font-size: 1.5rem;
-    padding: 8px 16px;
+    font-size: 1.5rem !important;
+    padding: 6px 12px !important;
+  }
+  .mi-navbar .navbar-nav {
+    flex-direction: column;
+    gap: 1rem !important;
+    font-size: 1.5rem !important;
+  }
+  .mi-navbar .navbar-nav .nav-link {
+    font-size: 1.5rem !important;
+    padding: 5px 0;
   }
   .sobre-mi .fotos,
   .mivision .fotos-grid {
@@ -244,28 +254,28 @@ footer p {
   }
   .sobre-mi .fotos img,
   .mivision .fotos-grid img {
+    width: 100%;
     height: auto;
-  }
-  .mi-navbar .navbar-nav {
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 1.5rem;
   }
   footer ul {
     flex-direction: column;
-    gap: 1rem;
+    gap: 10px;
     padding: 10px;
   }
-}
-@keyframes scale-hover {
-  0% {
-    transform: scale(1);
+  footer ul li a {
+    font-size: 1.5rem !important;
+    padding: 8px 12px;
   }
-  50% {
-    transform: scale(1.05);
+  footer p {
+    font-size: 1.5rem !important;
+    margin: 10px auto 0;
   }
-  100% {
-    transform: scale(1);
+  .section-base, .inicio, .sobre-mi, .mivision, .micamino, .contactos {
+    padding: 0 10px !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
